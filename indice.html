@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Malla Odontología USS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>👑 Malla de la Princesa Antonia 👑</h1>
+    <div id="mensaje-informativo" class="mensaje-informativo"></div>
+    
+    <div class="contenedor-malla">
+        <div class="semestre">
+            <h2>Semestre 1</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="intro-odo">Introducción a la Odontología</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="mat-fis">Matemática y Física Aplicada</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="bio-cel">Biología Celular</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="quim-gen">Química General y Orgánica</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="anato-hum">Anatomía Humana</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="estrat-apren">Estrategias para el Aprendizaje</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="antropo">Antropología</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre 2</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="promo-prev" data-requisitos="intro-odo">Promoción y Prevención en Salud</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="bio-mol" data-requisitos="bio-cel">Biología Molecular y Genética</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="bioquim" data-requisitos="bio-cel,quim-gen">Bioquímica General</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="anato-cc" data-requisitos="anato-hum">Anatomía de Cabeza y cuello</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="histoembrio" data-requisitos="bio-cel">Histoembriología</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre 3</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="preclin-mat1" data-requisitos="promo-prev,anato-cc">Preclínico y Materiales Dentales I</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="histo-oral" data-requisitos="anato-cc,histoembrio">Histología Oral</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="micro-gen" data-requisitos="bio-mol">Microbiología General</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="fisio-hum" data-requisitos="bio-mol,anato-cc">Fisiología Humana</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="salud-pob" data-requisitos="promo-prev">Salud Poblacional</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="etica" data-requisitos="antropo">Ética</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre 4</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="preclin-mat2" data-requisitos="preclin-mat1">Preclínico y Materiales Dentales II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="sim-clin1" data-requisitos="preclin-mat1">Simulación Clínica Integral I</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="cario-micro" data-requisitos="histo-oral,micro-gen,bioquim">Cariología y Microbiología Oral</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="fisio-oral" data-requisitos="fisio-hum,anato-cc">Fisiología Oral</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="pato-gen" data-requisitos="fisio-hum">Patología General</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="farma1" data-requisitos="fisio-hum,bioquim">Farmacología I</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="efi1" data-requisitos="etica">Electivo de Formación Integral I</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre 5</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="preclin-rehab1" data-requisitos="preclin-mat2,sim-clin1,cario-micro">Preclínico y Rehabilitación Oral I</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="sim-clin2" data-requisitos="preclin-mat2,sim-clin1,cario-micro,fisio-oral">Simulación Clínica Integral II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="inicio-clin1" data-requisitos="preclin-mat2,sim-clin1,cario-micro,fisio-oral">Inicio a la Clínica Integral I</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="imagen1" data-requisitos="preclin-mat2,sim-clin1,fisio-oral">Imagenología Diagnóstica I</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="pato-oral1" data-requisitos="cario-micro,pato-gen">Patología Oral I</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="farma2" data-requisitos="farma1">Farmacología II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="estadistica" data-requisitos="mat-fis">Estadística</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="bioetica" data-requisitos="sim-clin1">Bioética</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre 6</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="preclin-rehab2" data-requisitos="preclin-rehab1,sim-clin2">Preclínico y Rehabilitación Oral II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="sim-clin3" data-requisitos="preclin-rehab1,sim-clin2">Simulación Clínica Integral III</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="inicio-clin2" data-requisitos="inicio-clin1">Inicio a la Clínica Integral II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="imagen2" data-requisitos="imagen1">Imagenología Diagnóstica II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="pato-oral2" data-requisitos="pato-oral1">Patología Oral II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="intro-clin" data-requisitos="preclin-rehab1,sim-clin2">Introducción a la Clínica</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="efi2" data-requisitos="efi1">Electivo de Formación Integral II</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre 7</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="op-rehab1" data-requisitos="farma2,preclin-rehab2,sim-clin3,inicio-clin2,imagen2,pato-oral2,intro-clin">Operatoria y Rehabilitación Oral I</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="esto1" data-requisitos="farma2,preclin-rehab2,sim-clin3,inicio-clin2,imagen2,pato-oral2,intro-clin">Estomatología I</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="clin-adulto1" data-requisitos="farma2,preclin-rehab2,sim-clin3,inicio-clin2,imagen2,pato-oral2,intro-clin">Clínica Integrada del Adulto I</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="clin-nino1" data-requisitos="farma2,preclin-rehab2,sim-clin3,inicio-clin2,imagen2,pato-oral2,intro-clin">Clínica Integrada del Niño y Adolescente I</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="efi3" data-requisitos="efi2">Electivo de Formación Integral III</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre 8</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="op-rehab2" data-requisitos="op-rehab1">Operatoria y Rehabilitación Oral II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="esto2" data-requisitos="esto1">Estomatología II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="clin-adulto2" data-requisitos="op-rehab1,esto1,clin-adulto1">Clínica Integrada del Adulto II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="clin-nino2" data-requisitos="clin-nino1">Clínica Integrada del Niño y Adolescente II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="epidemiologia" data-requisitos="salud-pob">Epidemiología</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre 9</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="rehab-prot1" data-requisitos="op-rehab2">Rehabilitación Oral y Protésica I</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="esto3" data-requisitos="esto2">Estomatología III</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="clin-gerodon1" data-requisitos="op-rehab2,esto2,clin-adulto2">Clínica Integrada del Adulto y Gerodontología I</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="clin-nino3" data-requisitos="clin-nino2">Clínica Integrada del Niño y Adolescente III</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="efi4" data-requisitos="efi3">Electivo de Formación Integral IV</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre 10</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="rehab-prot2" data-requisitos="rehab-prot1">Rehabilitación Oral y Protésica II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="esto4" data-requisitos="esto3">Estomatología IV</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="clin-gerodon2" data-requisitos="rehab-prot1,esto3,clin-gerodon1">Clínica Integrada del Adulto y Gerodontología II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="clin-nino4" data-requisitos="clin-nino3">Clínica Integrada del Niño y Adolescente IV</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="taller-casos" data-requisitos="clin-adulto2,clin-nino2">Taller de Resolución de Casos Clínicos</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="met-invest" data-requisitos="estadistica">Metodología de la Investigación</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre 11</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="gestion" data-requisitos="clin-adulto2">Gestión e Innovación en Odontología</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="forense" data-requisitos="clin-adulto2">Odontología Forense</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="taller-comun" data-requisitos="rehab-prot2,esto4,clin-gerodon2,clin-nino4,taller-casos,met-invest">Taller de Salud Comunitaria</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="taller-invest" data-requisitos="rehab-prot2,esto4,clin-gerodon2,clin-nino4,taller-casos,met-invest">Taller de Investigación Aplicada</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre 12</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="internado" data-requisitos="gestion,forense,taller-comun,taller-invest">Internado Clínico Asistencial</div>
+        </div>
+    </div>
+    
+    <p style="text-align:center; margin-top:40px; font-style:italic; color:#b32e6b; user-select:none;">
+        ✨ Cada ramo aprobado te acerca más a cumplir tu sueño, Antonia. ¡Sigue brillando! ✨
+    </p>
+
+    <script src="script.js"></script>
+</body>
+</html>

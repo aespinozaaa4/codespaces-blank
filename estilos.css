@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #fff0f5, #ffe4e1); 
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #d63384; 
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+}
+
+.contenedor-malla {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.semestre {
+    background: rgba(255, 255, 255, 0.7); 
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.semestre:hover {
+    transform: translateY(-5px);
+}
+
+.semestre h2 {
+    text-align: center;
+    color: #e67ab8; 
+    margin-bottom: 10px;
+}
+
+.ramo {
+    position: relative;
+    background: white;
+    margin: 6px 0;
+    padding: 10px 15px;
+    border-left: 5px solid #f49ac2; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.ramo:hover {
+    background: #fff5f8;
+    box-shadow: 0 0 12px 2px #ffc1e3;
+    transform: scale(1.03);
+}
+
+
+.aprobado {
+    text-decoration: line-through;
+    background: #d63384; 
+    border-left-color: #a6346c; 
+    color: #fff;
+    font-weight: bold;
+    animation: pop 0.25s ease;
+}
+
+.ramo.bloqueado {
+    background-color: #f8f9fa;
+    border-left-color: #e0e0e0;
+    color: #aaa;
+    cursor: not-allowed;
+    text-decoration: none; 
+}
+
+.ramo.bloqueado:hover {
+    transform: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); 
+    background-color: #f8f9fa;
+}
+
+.ramo.bloqueado::before {
+    display: none; 
+}
+
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+.mensaje-informativo {
+    opacity: 0;
+    transition: opacity 0.6s ease, background-color 0.3s;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    pointer-events: none;
+    user-select: none;
+    min-height: 28px;
+}
+
+.mensaje-informativo.visible {
+    opacity: 1;
+}
+
+.mensaje-informativo.felicitacion {
+    background-color: #28a745;
+}
+
+.mensaje-informativo.error {
+    background-color: #dc3545; 
+}
